@@ -9,10 +9,10 @@ RUN yum -y update && \
     yum -y install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel && \
     yum -y clean all
 
-RUN /usr/sbin/useradd -m -s /bin/bash -c "ServerSpec user" servspec
-USER servspec
+#RUN /usr/sbin/useradd -m -s /bin/bash -c "ServerSpec user" servspec
+USER contint
 
-WORKDIR /home/servspec
+WORKDIR /home/contint
 RUN git clone git://github.com/sstephenson/rbenv.git .rbenv
 
 RUN git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -23,6 +23,9 @@ RUN /home/servspec/.rbenv/versions/2.2.1/bin/gem install 'highline'
 
 RUN echo 'eval "$(${HOME}/.rbenv/bin/rbenv init -)"' >> ~/.bashrc
 RUN echo 'export PATH="$HOME/.rbenv/versions/2.2.1/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-RUN exec $SHELL
+#RUN exec $SHELL
 
-CMD ["/bin/bash"]
+USER root
+
+# No fa falta en DCIP
+#CMD ["/bin/bash"]
