@@ -18,8 +18,8 @@ RUN git clone git://github.com/sstephenson/rbenv.git .rbenv
 RUN git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 RUN ${HOME}/.rbenv/bin/rbenv install -v 2.2.1
-RUN /home/servspec/.rbenv/versions/2.2.1/bin/gem install 'serverspec' 
-RUN /home/servspec/.rbenv/versions/2.2.1/bin/gem install 'highline' 
+RUN ${HOME}/.rbenv/versions/2.2.1/bin/gem install 'serverspec' 
+RUN ${HOME}/.rbenv/versions/2.2.1/bin/gem install 'highline' 
 
 RUN echo 'eval "$(${HOME}/.rbenv/bin/rbenv init -)"' >> ~/.bashrc
 RUN echo 'export PATH="$HOME/.rbenv/versions/2.2.1/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
