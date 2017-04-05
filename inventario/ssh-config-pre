@@ -1,0 +1,21 @@
+####
+# Default config
+###
+
+Host *
+  ServerAliveInterval 60
+  ServerAliveCountMax 2
+
+Host *+*
+  StrictHostKeyChecking no
+  ProxyCommand ssh -q -W $(echo %h | sed 's/^.*+//;/:/!s/$/ %p/;s/ /:/') $(echo %h | sed 's/+[^+]*$//;s/\([^+%%]*\)%%\([^+]*\)$/\2 -l \1/;s/:/ -p /')
+
+####
+# Work PRO dSMC Tools
+##
+
+Host dcip-testing
+  HostName 192.168.139.22
+  User cloud-user
+  IdentityFile inventori/llaves/maquinatest.dcip_epg_ost.cloud.key
+
