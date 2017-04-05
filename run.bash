@@ -2,4 +2,4 @@
 
 /bin/cp inventario/${1} ~/.ssh/config || exit 1
 /bin/chmod 400 inventario/llaves/* || exit 1
-scp -i inventario/llaves/maquinatest.dcip_epg_ost.cloud.key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -r cloud-user@dcip-testing:~ inventario
+scp -i inventario/llaves/maquinatest.dcip_epg_ost.cloud.key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -r inventario cloud-user@dcip-testing:~
