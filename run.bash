@@ -4,4 +4,5 @@
 /bin/chmod 400 inventario/llaves/* || exit 1
 #scp -i inventario/llaves/maquinatest.dcip_epg_ost.cloud.key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -r inventario cloud-user@dcip-testing:~
 cd config
+ssh -v dcip-testing
 rake spec
