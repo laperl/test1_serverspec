@@ -18,6 +18,9 @@ end
 
 host = ENV['TARGET_HOST']
 
+# Jaume exemple
+puts "\n## Running Tests on #{host} >>>"
+
 options = Net::SSH::Config.for(host)
 
 options[:user] ||= Etc.getlogin
