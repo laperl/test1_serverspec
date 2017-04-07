@@ -17,7 +17,7 @@ Host *+*
 Host dcip-testing
   HostName 192.168.139.22
   User cloud-user
-  IdentityFile ~/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
+  IdentityFile ~/test1_serverspec/test/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
   
 #  IdentityFile /home/contint/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
 #  UserKnownHostsFile /dev/null

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+pwd
 /bin/cp inventario/${1} ~/.ssh/config || exit 1
 /bin/chmod 400 inventario/llaves/* || exit 1
 #scp -i inventario/llaves/maquinatest.dcip_epg_ost.cloud.key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -r inventario cloud-user@dcip-testing:~
@@ -9,7 +10,7 @@
 #ssh-add inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
 cd config
 pwd
-cat ~/.ssh/config
+#cat ~/.ssh/config
 ls -lR ..
 ls -l ~/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
 rake spec
