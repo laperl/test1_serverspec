@@ -8,4 +8,7 @@
 #eval `ssh-agent -s`
 #ssh-add inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
 cd config
+pwd
+cat ~/.ssh/config
+ls -l ~/.ssh
 rake spec
