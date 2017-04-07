@@ -26,9 +26,9 @@ options = Net::SSH::Config.for(host)
 options[:user] ||= Etc.getlogin
 
 set :host,        options[:host_name] || host
+set :host_key,    options[:host_key => "ssh-rsa"]
+set :keys,        options[“/home/contint/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key”]
 set :ssh_options, options
-set :host_key => "ssh-rsa"
-set :keys => [ “/home/contint/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key” ]
 
 # Disable sudo
 # set :disable_sudo, true
