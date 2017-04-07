@@ -27,6 +27,8 @@ options[:user] ||= Etc.getlogin
 
 set :host,        options[:host_name] || host
 set :ssh_options, options
+set :host_key => "ssh-rsa"
+set :keys => [ “/home/contint/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key” ]
 
 # Disable sudo
 # set :disable_sudo, true
