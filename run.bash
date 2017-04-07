@@ -10,6 +10,6 @@
 cd config
 pwd
 cat ~/.ssh/config
-ls -lR .
+ls -lR ..
 ls -l ~/test1_serverspec/inventario/llaves/maquinatest.dcip_epg_ost.cloud.key
 rake spec
