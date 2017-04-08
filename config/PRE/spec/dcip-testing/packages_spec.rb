@@ -9,6 +9,6 @@ describe service('sshd'), :if => os[:family] == 'redhat' do
   it { should be_running }
 end
 
-describe port(20) do
+describe port(22) do
   it { should be_listening }
 end
