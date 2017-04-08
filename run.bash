@@ -1,11 +1,10 @@
 #!/bin/bash
 
 SSHCONFIGFILE=${1}
-SSHCONFIGFILE=${2}
-ENTORNO=${3}
-USUARIO=${4}
-CERTIFICADO=${5}
-IPDESTINO=${6}
+ENTORNO=${2}
+USUARIO=${3}
+CERTIFICADO=${4}
+IPDESTINO=${5}
 
 /bin/cp inventario/${SSHCONFIGFILE} ~/.ssh/config || exit 1
 /bin/cp inventario/llaves/* ~/.ssh/ || exit 1
