@@ -14,6 +14,6 @@ describe port(22) do
 end
 
 describe default_gateway do
-      its(:ipaddress) { should eq '192.168.10.1' }
-        its(:interface) { should eq 'br0'          }
+      its(:ipaddress) { should eq '172.16.3.1' }
+        its(:interface) { should eq 'eth0'          }
 end
